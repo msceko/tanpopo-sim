@@ -1,0 +1,32 @@
+{
+  "seed": 1,
+  "components": [
+    {
+      "name": "fibroblast_within",
+      "kind": "within_type",
+      "cell_type_key": "CellAnnotation.Level0",
+      "target": "Fibroblasts",
+      "n_programs": 2,
+      "expression_variance_fraction": 0.05,
+      "spatial_variance_fraction": [
+        0.25,
+        0.64
+      ],
+      "orthogonalize_spatial": true,
+      "loadings": {
+        "genes_per_program": 40,
+        "disjoint": true
+      },
+      "field": {
+        "kind": "rff",
+        "length_scale": 70.0,
+        "n_features": 128
+      }
+    }
+  ],
+  "baseline": {
+    "permute_within": [
+      "CellAnnotation.Level0"
+    ]
+  }
+}
