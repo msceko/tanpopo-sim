@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tanpopo-sim"
+version = "0.2.0"
+description = "Semi-synthetic spatial transcriptomics simulations with known conditional spatial programs"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "GPL-3.0-or-later" }
+authors = [{ name = "Tanpopo contributors" }]
+dependencies = [
+  "numpy>=1.24",
+  "scipy>=1.10",
+  "typer>=0.12",
+  "anndata>=0.10",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "black>=24", "build>=1"]
+
+[project.scripts]
+tanpopo-sim = "tanpopo_sim.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 99
